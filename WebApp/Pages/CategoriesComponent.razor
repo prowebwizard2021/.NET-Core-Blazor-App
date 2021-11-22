@@ -19,14 +19,27 @@
                 <tr>
                     <td>@category.Name</td>
                     <td>@category.Description</td>
-                    <td><button type="button" @onclick="@(() => OnClickEditCategory(category))">Edit</button></td>
+                    <td>
+                        <button 
+                            type="button" 
+                            class="btn btn-link"
+                            @onclick="@(() => OnClickEditCategory(category))">
+                            Edit
+                        </button>
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
 }
+
 <br />
-<button type="button" @onclick="OnClickAddCategory">Add Category</button>
+<button 
+    type="button" 
+    class="btn btn-primary" 
+    @onclick="OnClickAddCategory">
+    Add Category
+</button>
 
 @code {
     private List<Category> categories;
